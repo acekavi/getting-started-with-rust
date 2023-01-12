@@ -12,11 +12,19 @@ fn main() {
     let mut num_1: i32 = 0;
     let mut num_2: i32 = 1;
 
-    let count: i32 = 0;
+    let mut count: i32 = 0;
 
     if nterms <= 0 {
         println!("Please enter a positive integer");
     } else {
         print!("Fibonacci sequence: ");
+        while count < nterms {
+            print!("{num_1},");
+            let nth = num_1 + num_2;
+            num_1 = num_2;
+            num_2 = nth;
+            count += 1;
+        }
     }
+    println!("\n");
 }
